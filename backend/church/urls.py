@@ -18,26 +18,22 @@ from django.contrib import admin
 from django.urls import include, path
 from django.conf import settings 
 from django.conf.urls.static import static
-from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView, SpectacularRedocView
-
-urlpatterns_v1 = [
-    path('accounts/', include('accounts.urls')),
-]
+from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView, SSpectacularRedocView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     
-    path('api/v1/accounts/', include('accounts.urls')),
+    path('api/account/', include('account.urls')),
     
     path('api/payment/', include ('payment.urls')),
     
     path('api/profile/', include ('profile.urls')),
     
-    path ('api/dashboard/', include ('dashboard.urls'))
+    path ('api/dashboard/', include ('dashboard.urls')),
     
-    path('api/market/', include ('market.urls'))
+    path('api/market/', include ('market.urls')),
 
-  #Documentation urls   
+# Documentation urls   
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
     
     path('api/schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
