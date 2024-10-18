@@ -2,7 +2,7 @@ import pyotp
 
 from ..models import User, OTP
 
-from academia.utils.emailhandler import send_email
+from church.utils.emailhandler import send_email
 
 
 def create_otp(user, template):
