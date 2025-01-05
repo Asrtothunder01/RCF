@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to RCF</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="home.css">
+</head>
+
+<body class="bg-light text-dark">
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">RCF</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            
+            <li class="nav-item"><a class="nav-link" href="/market.html">Store</a></li>
+           
+            <li class="nav-item"><a class="nav-link" href="sunday_school.html">Sunday School</a></li>
+            <li class="nav-item"><a class="nav-link" href="sermon.html">Sermons</a></li>
+            
+            <li class="nav-item"><a class="nav-link" href="signin.html">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container my-5">
+    <!-- Welcome Section -->
+    <section class="text-center bg-primary text-white p-5 rounded-3">
+      <h1 class="fw-bold">Welcome to RCF!</h1>
+      <p class="lead">
+        Redeemed Christian Fellowship (RCF) is a vibrant community of believers passionate about worship, service, and spreading Christ's love. 
+        Join us in celebrating God's love and living out His purpose in our lives.
+      </p>
+    </section>
+
+    <!-- Profile Card -->
+    <div class="card my-5 mx-auto shadow" style="max-width: 800px;">
+      <div class="row g-0 align-items-center">
+        <div class="col-md-4 d-flex justify-content-center py-4">
+          <img src="profile_placeholder.jpg" class="img-fluid rounded-circle border border-3 border-primary" alt="Profile Picture" style="width: 150px; height: 150px;">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Welcome, <span id="username-card">[User Name]</span>!</h5>
+            <p class="card-text"><strong>Status:</strong> <span id="user-status">[Active/Inactive]</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- User Details Table -->
+    <section>
+      <h2 class="text-center text-primary mb-4">User Details</h2>
+      <div class="table-responsive">
+        <table class="table table-hover table-bordered">
+          <thead class="table-primary">
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>John Doe</td>
+              <td>Active</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Jane Smith</td>
+              <td>Inactive</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white text-center py-3">
+    <p class="mb-0">&copy; 2024 RCF. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="rcf.js"></script>
+</body>
+</html
