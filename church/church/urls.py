@@ -5,10 +5,10 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('rcf.urls')),  # Including rcf app's urls
+    path('home/', include('rcf.urls')),  # Including rcf app's urls
     
     # Sunday School app URLs
-    path('', include('sunday.urls')),  # Including sunday_school app's urls
+    path('sunday/', include('sunday.urls')),  # Including sunday_school app's urls
      path('sermon/', include('sermon.urls')),
      path('contact/', include('contact.urls')),
 ]

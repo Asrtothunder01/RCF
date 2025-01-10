@@ -25,7 +25,12 @@
           <li class="nav-item"><a class="nav-link" href="{% url 'contact_us' %}">Contact Us</a></li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="{% static user.profile_picture %}" alt="Profile Picture" class="rounded-circle" style="width: 30px; height: 30px;">
+              <!-- Use Django template conditionals for fallback image -->
+              {% if user.profile_picture %}
+                <img src="{{ user.profile_picture.url }}" alt="Profile Picture" class="rounded-circle" style="width: 30px; height: 30px;">
+              {% else %}
+                <img src="https://via.placeholder.com/150" alt="Profile Picture" class="rounded-circle" style="width: 30px; height: 30px;">
+              {% endif %}
               <span id="username">{{ user.username }}</span>
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
