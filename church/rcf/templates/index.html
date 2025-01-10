@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RCF - Empowering Faith</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Load static tag -->
+  {% load static %}
+
+  <!-- Reference to the static CSS file -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">RCF</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="market.html">Store</a></li>
+          <li class="nav-item"><a class="nav-link" href="sermon.html">Sermon</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="profile_placeholder.jpg" alt="Profile Picture" class="rounded-circle" style="width: 30px; height: 30px;"> 
+              <span id="username">[User Name]</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+              <li><a class="dropdown-item" href="profile.html">My Profile</a></li>
+              <li><a class="dropdown-item" href="settings.html">Settings</a></li>
+              <li><a class="dropdown-item" href="signup.html">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section text-center text-white d-flex flex-column justify-content-center align-items-center">
+    <h1 class="display-3 fw-bold">Welcome Back, <span id="hero-username">[User Name]</span>!</h1>
+    <p class="lead mt-3">A community of believers united by faith, purpose, and love.</p>
+    <a href="#features" class="btn btn-glass mt-4">Explore More</a>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="text-center text-primary mb-4">About Us</h2>
+      <p class="text-center mb-5">
+        At Redeemed Christian Fellowship (RCF), we are dedicated to inspiring lives, fostering spiritual growth, and spreading God’s love. Be part of a family that celebrates faith and builds lasting connections.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center text-primary mb-4">Our Features</h2>
+      <div class="row g-4">
+        <div class="col-md-4 text-center">
+          <div class="feature-card p-4 shadow">
+            <h4>Sunday Worship</h4>
+            <p>Experience the joy and peace of spirit-filled worship sessions.</p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="feature-card p-4 shadow">
+            <h4>Bible Studies</h4>
+            <p>Grow deeper in the Word with engaging and practical teachings.</p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="feature-card p-4 shadow">
+            <h4>Community Outreach</h4>
+            <p>Make an impact in the lives of others through service and compassion.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-5">
+    <div class="container">
+      <h2 class="text-center text-primary mb-4">What People Say</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="testimonial p-4 shadow">
+            <p class="mb-3">"RCF has been a life-changing experience for me. I found a family that supports my faith journey."</p>
+            <h5 class="text-primary">- Sarah Johnson</h5>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="testimonial p-4 shadow">
+            <p class="mb-3">"The worship sessions are incredible, and the community is welcoming and inspiring."</p>
+            <h5 class="text-primary">- Mark Evans</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-primary text-white text-center py-3">
+    <p class="mb-0">&copy; 2025 RCF. Empowering Faith, Transforming Lives.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Dynamically load the username and profile picture
+    const username = "John Doe"; // Replace with dynamic data
+    const profilePicture = "profile.jpg"; // Replace with dynamic data
+
+    document.getElementById('username').textContent = username;
+    document.getElementById('hero-username').textContent = username;
+    document.querySelector('#userDropdown img').src = profilePicture;
+  </script>
+</body>
+
+</html>
