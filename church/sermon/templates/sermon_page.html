@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detailed sermon page with topic, memory verse, and more.">
+    <meta name="keywords" content="sermon, Christianity, faith, memory verse">
+    <title>{{ sermon.title }}</title>
+    {%load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'sermon_page.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Back to Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container mt-5">
+        <!-- Sermon Banner -->
+        <div class="sermon-banner text-center mb-4">
+            {% if sermon.banner_image %}
+                <img src="{{ sermon.banner_image.url }}" alt="Sermon Banner" class="img-fluid rounded">
+            {% else %}
+                <p>No banner image available.</p>
+            {% endif %}
+        </div>
+
+        <!-- Sermon Details -->
+        <h1 class="text-center mb-4">Sermon Title: {{ sermon.title }}</h1>
+        <div class="sermon-details">
+            <p><strong>Memory Verse:</strong> {{ sermon.memory_verse }}</p>
+            <p><strong>Note:</strong> {{ sermon.note }}</p>
+            {% if sermon.further_reading %}
+                <p><strong>Further Reading:</strong> {{ sermon.further_reading }}</p>
+            {% endif %}
+        </div>
+
+        <!-- Audio Upload -->
+        <div class="audio-section mt-4">
+            <h5>Listen to the Sermon:</h5>
+            {% if sermon.audio_file %}
+                <audio controls>
+                    <source src="{{ sermon.audio_file.url }}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            {% else %}
+                <p>No audio file available.</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="sermon_page.js"></script>
+</body>
+</html>
