@@ -54,4 +54,12 @@ class CustomUserForm(forms.ModelForm):
     """
     class Meta:
         model = CustomUser
-        fields = ['profile_picture', 'bio']
+        fields = ['profile_picture', 'bio', 'username']
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # Dynamically add classes to form fields
+        self.fields['username'].widget.attrs.update({'class': 'form-control custom-input'})
+        self.fields['bio'].widget.attrs.update({'class': 'form-control custom-input', 'placeholder': 'Tell us about yourself'})
+        self.fields['profile_picture'].widget.attrs.update({'class': 'form-control custom-input'})
+

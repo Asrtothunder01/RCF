@@ -1,0 +1,110 @@
+/* style.css */
+
+/* General Body Styling */
+body {
+    background: radial-gradient(circle, #2e3b4e, #1c1f25);
+    font-family: 'Roboto', sans-serif;
+    color: #ddd;
+  }
+  
+  .navbar {
+    background: #111;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .navbar-brand {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: #ffd700;
+  }
+  
+  .nav-link {
+    color: #ddd;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    background: #ffd700;
+    color: #111;
+  }
+  
+  /* Profile Form Section */
+  .card {
+    background: #111;
+    border-radius: 10px;
+  }
+  
+  .card .form-label {
+    font-weight: bold;
+    color: #bbb;
+  }
+  
+  .custom-input {
+    background: #333;
+    border: 1px solid #555;
+    color: #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    transition: all 0.3s ease;
+  }
+  
+  .custom-input:focus {
+    background: #444;
+    border-color: #ffd700;
+    color: #fff;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffd700;
+    margin-bottom: 30px;
+  }
+  
+  /* Button Styling */
+  .custom-btn {
+    background: #dc3545;
+    border: none;
+    padding: 15px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    border-radius: 50px;
+  }
+  
+  .custom-btn:hover {
+    background: #c82333;
+    transform: scale(1.05);
+  }
+  
+  /* Footer Styling */
+  .footer {
+    background: #111;
+    font-size: 0.9rem;
+    color: #888;
+    letter-spacing: 0.5px;
+    padding: 30px 0;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar-brand {
+      font-size: 1.5rem;
+    }
+  
+    h2 {
+      font-size: 2rem;
+    }
+  
+    .custom-btn {
+      font-size: 1rem;
+    }
+  }
+  
