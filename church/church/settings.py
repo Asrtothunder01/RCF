@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'contact',
 ]
 
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 AUTH_USER_MODEL = 'rcf.CustomUser'
 
